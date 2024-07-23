@@ -1,7 +1,7 @@
 <?php
 
-require_once './Builders/PizzaBuilder.php';
-require_once './Pizzas/Margherita.php';
+require_once __DIR__. '/PizzaBuilder.php';
+require_once __DIR__.'/../Pizzas/Margherita.php';
 
 class MargheritaBuilder implements PizzaBuilder
 {
@@ -19,7 +19,8 @@ class MargheritaBuilder implements PizzaBuilder
         /**
          * @TODO : ajouter l'ingrédient et augmenter le prix de 1,5€
          */
-
+        // important to prepare the pizza 
+        $this->pizza->addIngredient($ingredient, 1.5); // update the ingredients
         return $this;
     }
 
@@ -28,7 +29,9 @@ class MargheritaBuilder implements PizzaBuilder
         /**
          * @TODO : il faut changer la taille de la pizza de "M" à "XL"
          */
-        return $this;
+        $this->pizza->setSize('XL'); // update the size 
+
+       return $this;
     }
 
     public function getPizza() : Pizza

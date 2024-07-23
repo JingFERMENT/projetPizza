@@ -1,6 +1,6 @@
 <?php
 
-require_once './Pizzas/Pizza.php';
+require_once __DIR__ .'/Pizza.php';
 
 class Margherita extends Pizza
 {

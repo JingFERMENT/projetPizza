@@ -1,6 +1,6 @@
 <?php
 
-require_once './Directors/Pizzaiolo.php';
+require_once __DIR__. '/Directors/Pizzaiolo.php';
 require_once './Builders/MargheritaBuilder.php';
 
 function it($m,$p){
